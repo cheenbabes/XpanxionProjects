@@ -5,6 +5,8 @@
  */
 package com.xpanxion.userproject;
 
+import java.util.Objects;
+
 /**
  *
  * @author ebaibourine
@@ -38,6 +40,38 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + this.userId;
+        hash = 37 * hash + Objects.hashCode(this.username);
+        hash = 37 * hash + Objects.hashCode(this.password);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final User other = (User) obj;
+        if (this.userId != other.userId) {
+            return false;
+        }
+        if (!Objects.equals(this.username, other.username)) {
+            return false;
+        }
+        if (!Objects.equals(this.password, other.password)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
     
     
 }
