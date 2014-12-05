@@ -20,12 +20,12 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Repository
 @Transactional
-public class UserDaoImpl implements UserDao {
+public class UserDaoDbImpl implements UserDao {
     
     private SessionFactory sessionFactory;
     
     @Inject
-    public UserDaoImpl(SessionFactory sessionFactory){
+    public UserDaoDbImpl(SessionFactory sessionFactory){
         this.sessionFactory = sessionFactory;
     }
     
