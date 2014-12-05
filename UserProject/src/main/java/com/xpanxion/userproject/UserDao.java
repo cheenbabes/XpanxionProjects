@@ -13,5 +13,13 @@ import java.util.List;
  */
 public interface UserDao {
     
-    public List<User> getAllUsers();
+    User getUser(long userId);
+    
+    User addUser(User user);
+    
+    void updateUser(long userId, String password);
+    
+    void deleteUser(long userId);
+    
+    List<User> getAllUsers();
 }

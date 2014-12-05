@@ -17,8 +17,8 @@ public class HelloController {
         return "hello";
     }
     
-    @RequestMapping(value ="/index", method=RequestMethod.GET)
+    @RequestMapping(value ="/", method=RequestMethod.GET)
     public String getIndex(){
-        return "/UserProject/index";
+        return "index";
     }
 }
