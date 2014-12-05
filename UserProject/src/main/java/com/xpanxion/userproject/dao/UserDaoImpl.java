@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.xpanxion.userproject;
+package com.xpanxion.userproject.dao;
 
+import com.xpanxion.userproject.model.User;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;

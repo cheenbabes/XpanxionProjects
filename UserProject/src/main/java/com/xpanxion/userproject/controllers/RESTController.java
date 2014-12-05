@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.xpanxion.userproject;
+package com.xpanxion.userproject.controllers;
 
+import com.xpanxion.userproject.dao.UserDao;
+import com.xpanxion.userproject.model.User;
 import java.util.List;
 import javax.inject.Inject;
 import org.springframework.http.HttpStatus;

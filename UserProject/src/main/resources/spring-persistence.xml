@@ -39,7 +39,7 @@
     </bean>
 
     <bean id="userDao"
-          class="com.xpanxion.userproject.UserDaoImpl">
+          class="com.xpanxion.userproject.dao.UserDaoImpl">
         <property name="jdbcTemplate" ref="jdbcTemplate" />
     </bean>
 

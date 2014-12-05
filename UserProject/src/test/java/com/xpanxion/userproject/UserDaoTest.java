@@ -5,6 +5,8 @@
  */
 package com.xpanxion.userproject;
 
+import com.xpanxion.userproject.model.User;
+import com.xpanxion.userproject.dao.UserDao;
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;

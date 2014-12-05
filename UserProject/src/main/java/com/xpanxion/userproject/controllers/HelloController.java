@@ -1,4 +1,4 @@
-package com.xpanxion.userproject;
+package com.xpanxion.userproject.controllers;
 
 import java.util.Map;
 import org.springframework.stereotype.Controller;
@@ -17,7 +17,7 @@ public class HelloController {
         return "hello";
     }
     
-    @RequestMapping(value ="/", method=RequestMethod.GET)
+    @RequestMapping(value ={"/","/index"}, method=RequestMethod.GET)
     public String getIndex(){
         return "index";
     }

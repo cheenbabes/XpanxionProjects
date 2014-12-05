@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.xpanxion.userproject;
+package com.xpanxion.userproject.model;
 
 import java.util.Objects;
 
