@@ -41,6 +41,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
     public void addUser(UserEntity user) {
+        user.setEnabled(1);
         currentSession().save(user);
     }
 

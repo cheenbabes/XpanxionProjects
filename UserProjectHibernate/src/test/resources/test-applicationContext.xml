@@ -44,6 +44,10 @@
     <bean id="userDao" class="com.xpanxion.userprojecthibernate.dao.UserDaoImpl">
         <constructor-arg ref="sessionFactory"/>
     </bean>
+    
+    <bean id="userService" class="com.xpanxion.userprojecthibernate.service.UserServiceImpl">
+        <constructor-arg ref="userDao"/>
+    </bean>
 
     <!-- HIBERNATE CONFIGURATION -->
     <bean id="sessionFactory"
