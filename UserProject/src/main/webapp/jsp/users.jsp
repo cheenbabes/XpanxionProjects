@@ -32,7 +32,7 @@
                     </table>
                     
                     <br>
-                    <a href="/index">Home</a>
+                    <a href="index">Home</a>
                 </div>
             </div>
         </div>

@@ -22,7 +22,7 @@
                     login-page="/login"
                     authentication-failure-url="/login?login_error=1"/>
         <!-- #3d - Go back to login page when user logs out -->
-        <logout logout-success-url="/login" />
+        <logout logout-success-url="/" />
         <!-- #3e - Access to these endpoints require admin role -->
 <!--        <intercept-url pattern="/spring/editContactForm" access="ROLE_ADMIN" />
         <intercept-url pattern="/spring/displayNewContactForm" access="ROLE_ADMIN" />
