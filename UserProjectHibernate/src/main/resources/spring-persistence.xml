@@ -40,7 +40,7 @@
         <property name="dataSource" ref="dataSource"/>          
     </bean>
     
-    <bean id="userDao" class="com.xpanxion.userprojecthibernate.dao.UserDaoImpl">
+    <bean id="userDao" class="com.xpanxion.userprojecthibernate.dao.UserDaoDbImpl">
         <constructor-arg ref="sessionFactory"/>
     </bean>
 
