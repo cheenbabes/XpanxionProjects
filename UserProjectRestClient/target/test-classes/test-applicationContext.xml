@@ -16,4 +16,7 @@
 
     <!-- Bean definitions go here -->
     
+     <bean id="userDao" class="com.xpanxion.userprojectrestclient.dao.UserDaoRestImpl">
+    </bean>
+    
 </beans>

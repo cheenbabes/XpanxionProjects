@@ -4,7 +4,7 @@
     <artifactId>MVNArchetype</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-    <name>MVN Archetype for Spring MVC Application</name>
+    <name>REST Client - User database</name>
     <url>http://maven.apache.org</url>
     <properties>
         <spring.version>3.2.9.RELEASE</spring.version>

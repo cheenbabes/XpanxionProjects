@@ -5,6 +5,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Hello Controller</title>
     </head>
