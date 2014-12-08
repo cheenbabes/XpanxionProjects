@@ -16,30 +16,45 @@
                 <div class="col-md-12">
 
                     <h2>Users</h2>
-                    <div id="user-list"></div>
 
-                    
-                    <br>
-                    <a href="index">Home</a>
-                </div>
-            </div>
-        </div>
-        <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
-        <script src="js/User.js" type="text/javascript"></script>
-    </body>
-</html>
-
-<!--                    <table class="table table-hover">
+                    <table class="table table-hover" id="user-list">
                         <tr>
                             <th>ID</th>
                             <th>Username</th>
                             <th>Password</th>
-                        </tr>
-                        <c:forEach var="user" items="${userList}">
-                            <tr>
-                                <td>${user.id}</td>
-                                <td>${user.username}</td>
-                                <td>${user.password}</td>
-                            </tr>
-                        </c:forEach>
-                    </table>-->
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr> 
+
+                    </table>                    
+                    <br>
+                    
+                    <div class="row">
+                        <div class="col-md-3 form-group" id="add-div">
+                            Username: <input id="add-username" type="text" class="form-control"><br>
+                            Password: <input id="add-password" type="password" class="form-control"><br>
+                            <input id="addButton" type="submit" value="Add New User" class="btn btn-primary">
+                        </div>
+                        
+                        <div class="col-md-3 form-group" id="edit-div">
+                            Username: <input id="edit-username" type="text" class="form-control" disabled/><br>
+                            Password: <input id="edit-password" type="text" class="form-control"/><br>
+                            <input id="edit-id" type="hidden"/>
+                            <input id="editButton" type="submit" value="Edit" class="btn btn-default">
+                        </div>
+                    </div>
+
+
+                    <a href="index" class="btn btn-default"> < Home</a>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+        <script src="js/User.js" type="text/javascript"></script>
+
+    </body>
+</html>
