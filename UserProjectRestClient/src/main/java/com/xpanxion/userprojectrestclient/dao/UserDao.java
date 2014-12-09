@@ -5,7 +5,7 @@
  */
 package com.xpanxion.userprojectrestclient.dao;
 
-import com.xpanxion.userprojectrestclient.model.UserBean;
+import com.xpanxion.userprojectrestclient.model.User;
 import java.util.List;
 
 /**
@@ -14,14 +14,14 @@ import java.util.List;
  */
 public interface UserDao {
     
-    UserBean getUser(long userId);
+    User getUser(long userId);
 
-    void addUser(UserBean user);
+    void addUser(User user);
 
     void updateUser(long userId, String password);
 
     void deleteUser(long userId);
 
-    List<UserBean> getAllUsers();
+    List<User> getAllUsers();
 
 }

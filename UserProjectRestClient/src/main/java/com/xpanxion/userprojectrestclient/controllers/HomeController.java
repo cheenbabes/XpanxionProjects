@@ -18,7 +18,7 @@ public class HomeController {
     
     @RequestMapping(value="/hello", method = RequestMethod.GET)
     public String helloController(Model model){
-        model.addAttribute("message", "Hello from the controller" );
+        model.addAttribute("message", "Welcome to the home page");
         return "hello";
     }
 }

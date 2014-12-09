@@ -5,7 +5,7 @@
  */
 package com.xpanxion.userprojectrestclient.dao;
 
-import com.xpanxion.userprojectrestclient.model.UserBean;
+import com.xpanxion.userprojectrestclient.model.User;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -29,24 +29,24 @@ public class UserDaoRestImpl implements UserDao {
     }
 
     @Override
-    public UserBean getUser(long userId) {
+    public User getUser(long userId) {
         this.setUpRestTemplate();
         String url = baseUrl + userId;
-        return rt.getForObject(url, UserBean.class);
+        return rt.getForObject(url, User.class);
     }
 
     @Override
-    public void addUser(UserBean user) {
+    public void addUser(User user) {
         this.setUpRestTemplate();
         String url = baseUrl + "user";
-        rt.postForObject(url, user, UserBean.class);
+        rt.postForObject(url, user, User.class);
     }
 
     @Override
     public void updateUser(long userId, String password) {
         this.setUpRestTemplate();
         String url = baseUrl + "user/" + userId;
-        UserBean u = this.getUser(userId);
+        User u = this.getUser(userId);
         u.setPassword(password);
         rt.put(url, u);
     }
@@ -59,7 +59,7 @@ public class UserDaoRestImpl implements UserDao {
     }
 
     @Override
-    public List<UserBean> getAllUsers() {
+    public List<User> getAllUsers() {
         this.setUpRestTemplate();
         String url = baseUrl + "users";
         return rt.getForObject(url, ArrayList.class);

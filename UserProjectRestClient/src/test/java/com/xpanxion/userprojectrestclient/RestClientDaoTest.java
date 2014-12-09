@@ -6,7 +6,7 @@
 package com.xpanxion.userprojectrestclient;
 
 import com.xpanxion.userprojectrestclient.dao.UserDao;
-import com.xpanxion.userprojectrestclient.model.UserBean;
+import com.xpanxion.userprojectrestclient.model.User;
 import org.junit.After;
 import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
@@ -24,8 +24,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class RestClientDaoTest {
 
     UserDao dao;
-    UserBean u1;
-    UserBean u2;
+    User u1;
+    User u2;
 
     public RestClientDaoTest() {
     }
@@ -43,11 +43,11 @@ public class RestClientDaoTest {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("test-applicationContext.xml");
         dao = (UserDao) ctx.getBean("userDao");
 
-        u1 = new UserBean();
+        u1 = new User();
         u1.setUsername("user1");
         u1.setPassword("user1Password");
 
-        u2 = new UserBean();
+        u2 = new User();
         u2.setUsername("user2");
         u2.setPassword("user2Password");
 
@@ -65,7 +65,7 @@ public class RestClientDaoTest {
     
 //    @Test
     public void addGetDeleteUser(){
-        UserBean u = dao.getUser(31);
+        User u = dao.getUser(31);
         
     }
 }
