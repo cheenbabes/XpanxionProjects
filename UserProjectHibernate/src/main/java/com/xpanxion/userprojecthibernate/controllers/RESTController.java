@@ -51,10 +51,9 @@ public class RESTController {
     
     @RequestMapping(value="/user/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void putUser(@PathVariable("id") int id, @RequestParam("password") String command, @RequestBody UserBean userToUpdate){
-       if(command.equals("newpassword")){
+    public void putUser(@PathVariable("id") int id, @RequestBody UserBean userToUpdate){
+           userToUpdate.setId(id);
            userService.updateUser(userToUpdate);
-       }
     }
         
     @RequestMapping(value="/user", method = RequestMethod.POST)
