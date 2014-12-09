@@ -64,3 +64,11 @@ function getEditUser(element) {
         $('#edit-id').val(data.id);
     });
 }
+
+function deleteUser(element){
+    $.ajax({
+        type: 'DELETE',
+        url: 'http://localhost:8080/UserProjectHibernate/rest/user/' + element.id
+    }).success(loadContacts());
+    
+}
