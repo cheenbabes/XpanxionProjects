@@ -45,7 +45,7 @@
                     </div>
 
 
-                    <a href="index" class="btn btn-default"> < Home</a>
+                    <a href="index" class="btn btn-default"> < Home</a> <a href="j_spring_security_logout" class="btn btn-danger">Logout</a>
 
                 </div>
             </div>
