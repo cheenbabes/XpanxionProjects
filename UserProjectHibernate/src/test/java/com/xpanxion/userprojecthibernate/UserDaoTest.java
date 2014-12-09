@@ -78,7 +78,13 @@ public class UserDaoTest {
         dao.addUser(u1);
         
         UserEntity userFromDb = dao.getUser(u1.getId());
+        //test to make sure the user is automatically enabled for security when added to the database
+        assertEquals(u1.getEnabled(), 1);
+        
+        //check to make sure it's the same user
         assertEquals(u1, userFromDb);
+        
+        //check for 
         
         dao.deleteUser(u1.getId());
         assertNull(dao.getUser(u1.getId()));

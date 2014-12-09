@@ -5,6 +5,7 @@
  */
 package com.xpanxion.userprojecthibernate.dao;
 
+import com.xpanxion.userprojecthibernate.dto.entity.Authority;
 import com.xpanxion.userprojecthibernate.dto.entity.UserEntity;
 import java.util.List;
 import javax.inject.Inject;
@@ -41,8 +42,14 @@ public class UserDaoDbImpl implements UserDao {
     @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
     public void addUser(UserEntity user) {
+        //enable the new user in Spring security
         user.setEnabled(1);
         currentSession().save(user);
+        //create an authority entry for the new user and make it valid
+        Authority a = new Authority();
+        a.setUsername(user.getUsername());
+        a.setAuthority("ROLE_USER");
+        currentSession().save(a);
     }
 
     @Override
