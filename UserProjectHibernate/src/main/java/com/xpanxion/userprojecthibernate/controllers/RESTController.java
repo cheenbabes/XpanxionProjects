@@ -57,7 +57,7 @@ public class RESTController {
         
     @RequestMapping(value="/user", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    @ResponseBody public UserBean createUser(@RequestParam("USER") String user, @RequestBody UserBean userToCreate){
+    @ResponseBody public UserBean createUser(@RequestBody UserBean userToCreate){
        userService.addUser(userToCreate);
        return userToCreate;
     }
