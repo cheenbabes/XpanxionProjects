@@ -39,8 +39,9 @@ public class UserServiceImpl implements UserServiceDao {
     }
 
     @Override
-    public void updateUser(long userId, String password) {
-        userDao.updateUser(userId, password);
+    public void updateUser(UserBean user) {
+        UserEntity ue = this.convertUserBeanToUserEntity(user);
+        userDao.updateUser(ue);
     }
 
     @Override

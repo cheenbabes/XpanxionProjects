@@ -100,7 +100,8 @@ public class UserDaoTest {
     @Test
     public void updateUser(){
         dao.addUser(u1);
-        dao.updateUser(u1.getId(), "newPassword");
+        u1.setPassword("newPassword");
+        dao.updateUser(u1);
         
         UserEntity userFromDb = dao.getUser(u1.getId());
         assertEquals(userFromDb.getPassword(), "newPassword");

@@ -46,10 +46,8 @@ public class UserDaoDbImpl implements UserDao {
     }
 
     @Override
-    public void updateUser(long userId, String password) {
-        UserEntity u = this.getUser(userId);
-        u.setPassword(password);
-        currentSession().update(u);
+    public void updateUser(UserEntity user) {
+        currentSession().update(user);
     }
 
     @Override

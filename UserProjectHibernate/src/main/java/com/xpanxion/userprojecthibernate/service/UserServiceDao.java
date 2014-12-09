@@ -19,7 +19,7 @@ public interface UserServiceDao {
 
     void addUser(UserBean user);
 
-    void updateUser(long userId, String password);
+    void updateUser(UserBean user);
 
     void deleteUser(long userId);
 

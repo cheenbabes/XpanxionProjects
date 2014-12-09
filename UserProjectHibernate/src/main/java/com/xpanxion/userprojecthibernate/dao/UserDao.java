@@ -18,7 +18,7 @@ public interface UserDao {
 
     void addUser(UserEntity user);
 
-    void updateUser(long userId, String password);
+    void updateUser(UserEntity user);
 
     void deleteUser(long userId);
 
